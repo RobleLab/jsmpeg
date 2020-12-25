@@ -18,7 +18,7 @@ if (process.argv.length < 3) {
 
 var STREAM_SECRET = process.argv[2],
 	STREAM_PORT = process.argv[3] || 8081,
-	WEBSOCKET_PORT = process.argv[4] || 8082,
+	WEBSOCKET_PORT = process.argv[4] || 8084,
 	RECORD_STREAM = false;
 
 // Websocket Server

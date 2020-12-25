@@ -11,16 +11,19 @@ services:
         command: -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 -f mpegts -codec:v mpeg1video -s 640x480 -b:v 1000k -bf 0 http://ws-relay:8081/sec
         devices:
             - "/dev/video0:/dev/video0"
+        restart: always
     http-server:
         build:
             context: .
             dockerfile: Dockerfile-http
         ports:
             - "8090:8090"
+        restart: always
     ws-relay:
         build:
             context: .
             dockerfile: Dockerfile-ws
         ports:
             - "8081:8081"
-            - "8082:8082"
+            - "8084:8084"
+        restart: always

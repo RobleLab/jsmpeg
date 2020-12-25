@@ -3,4 +3,4 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN npm install
-CMD node websocket-relay.js sec 8081 8082
+CMD node websocket-relay.js sec 8081 8084
